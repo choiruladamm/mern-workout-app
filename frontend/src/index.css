@@ -94,7 +94,7 @@ form button {
   padding: 10px;
   font-family: "poppins";
   border-radius: 4px;
-  
+  cursor: pointer;
 }
 
 div.error {
