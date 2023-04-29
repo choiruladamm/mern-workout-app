@@ -12,7 +12,6 @@ const Home = () => {
 
       if (response.ok) {
         setWorkouts(json);
-        console.log(json);
       }
     };
 
