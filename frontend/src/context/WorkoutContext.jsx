@@ -1,9 +1,11 @@
-import React from 'react'
+import { createContext } from "react"
 
-const WorkoutContext = () => {
+export const WorkoutContext = createContext()
+
+export const WorkoutContextProvider = () => {
   return (
-    <div>WorkoutContext</div>
+    <WorkoutContext.Provider>
+      
+    </WorkoutContext.Provider>
   )
 }
-
-export default WorkoutContext
