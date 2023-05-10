@@ -61,6 +61,7 @@ header a {
 }
 
 .workout-details span {
+  font-size: 1.2rem;
   position: absolute;
   top: 20px;
   right: 20px;
