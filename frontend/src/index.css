@@ -65,9 +65,9 @@ header a {
   top: 20px;
   right: 20px;
   cursor: pointer;
-  background: #f1f1f1;
-  padding: 6px;
-  border-radius: 50%;
+  background: #fea6a6;
+  padding: 6px 20px;
+  border-radius: 10px;
   color: #333;
 }
 

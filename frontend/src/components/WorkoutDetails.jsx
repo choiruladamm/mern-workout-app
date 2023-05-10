@@ -1,4 +1,6 @@
 const WorkoutDetails = ({ workout }) => {
+
+  
   return (
     <div className="workout-details">
       <h4>{workout.title}</h4>
@@ -11,6 +13,7 @@ const WorkoutDetails = ({ workout }) => {
         {workout.reps}
       </p>
       <p>{workout.createdAt}</p>
+      <span>Delete</span>
     </div>
   );
 };
