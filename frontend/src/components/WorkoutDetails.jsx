@@ -15,7 +15,7 @@ const WorkoutDetails = ({ workout }) => {
 
     if (response.ok) {
       dispatch({ type: "DELETE_WORKOUT", payload: json });
-      alert("Delete Succes");
+      alert(`Succes Delete ${workout.title}`);
     }
   };
 
