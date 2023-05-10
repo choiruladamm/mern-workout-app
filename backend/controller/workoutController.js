@@ -33,6 +33,24 @@ const getWorkoutById = async (req, res) => {
 const createWorkout = async (req, res) => {
   const { title, reps, load } = req.body;
 
+  // error handling
+  let emptyFields = [];
+
+  if (!title) {
+    emptyFields.push("title");
+  }
+  if (!reps) {
+    emptyFields.push("reps");
+  }
+  if (!load) {
+    emptyFields.push("load");
+  }
+  if (emptyFields.length > 0) {
+    return res
+      .status(400)
+      .json({ error: "Input field sng kosong", emptyFields });
+  }
+
   // add doc to db
   try {
     //check document if already exist
