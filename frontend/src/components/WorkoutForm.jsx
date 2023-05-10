@@ -31,9 +31,9 @@ const WorkoutForm = () => {
       setTitle("");
       setLoad("");
       setReps("");
-      setError(null);
-      console.log("new workout added");
+      setError(null);;
       dispatch({ type: "CREATE_WORKOUT", payload: json });
+      alert(`Succes Created Workout ${title} Load:${load} Reps:${reps}`)
     }
   };
 
