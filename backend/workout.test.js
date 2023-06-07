@@ -6,7 +6,7 @@ require("dotenv").config();
 
 /* Connecting to the database before each test. */
 beforeEach(async () => {
-  await mongoose.connect(process.env.MONGODB_URI);
+  await mongoose.connect(process.env.MONGO_URI);
 });
 
 /* Closing database connection after each test. */
@@ -19,5 +19,15 @@ describe("GET /api/workouts", () => {
     const res = await request(app).get("/api/workouts");
     expect(res.statusCode).toBe(200);
     expect(res.body.length).toBeGreaterThan(0);
+  });
+});
+
+describe("GET /api/workouts/:id", () => {
+  it("should return a workouts", async () => {
+    const res = await request(app).get(
+      "/api/workouts/64428dacdfb535aa8fa5a15d"
+    );
+    expect(res.statusCode).toBe(200);
+    expect(res.body.title).toBe("Jumping");
   });
 });
