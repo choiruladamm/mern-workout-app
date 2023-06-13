@@ -54,5 +54,3 @@ describe("DELETE /api/workouts/:id", () => {
     expect(res.statusCode).toBe(200);
   });
 });
-
-// test-merge
