@@ -25,7 +25,7 @@ describe("GET /api/workouts", () => {
 describe("GET /api/workouts/:id", () => {
   it("should return a workouts", async () => {
     const res = await request(app).get(
-      "/api/workouts/64888eb4281f081d38eb74b7"
+      "/api/workouts/64897efc9701cfe1e2665640"
     );
     expect(res.statusCode).toBe(200);
     expect(res.body.title).toBe("Bench Press");
@@ -35,7 +35,7 @@ describe("GET /api/workouts/:id", () => {
 describe("PUT /api/workouts/:id", () => {
   it("should update a workouts", async () => {
     const res = await request(app)
-      .patch("/api/workouts/64888eb4281f081d38eb74b7")
+      .patch("/api/workouts/64897efc9701cfe1e2665640")
       .send({
         title: "Bench Press",
         reps: 100,
@@ -49,7 +49,7 @@ describe("PUT /api/workouts/:id", () => {
 describe("DELETE /api/workouts/:id", () => {
   it("should delete a workouts", async () => {
     const res = await request(app).delete(
-      "/api/workouts/64888eb4281f081d38eb74b7"
+      "/api/workouts/64897efc9701cfe1e2665640"
     );
     expect(res.statusCode).toBe(200);
   });
